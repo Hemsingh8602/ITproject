@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITNESS CALCULATOR</title>
+</head>
+<body>
+    <h1>CALCULATE YOUR BMI</h1>
+    <form>
+        YOUR WEIGHT : <input type="text" placeholder="enter in kg" id="weight">
+        YOUR HEIGHT : <input type="text" placeholder="enter in cm" id="height">
+        <input type="button" onclick="calculate()" value="click">
+    </form>
+    <p>Your BMI is : <br>
+    <span id="result"></span>
+    </p>
+
+    <script>
+        function calculate(){
+          var weight = document.getElementById("weight").value;
+           var height = document.getElementById("height").value;
+            document.getElementById("result").innerHTML = weight/(height/100);
+        }
+    </script>
+</body>
+</html>
